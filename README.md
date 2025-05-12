@@ -7,6 +7,7 @@ API básica em Node
 | Env | URL                         |
 | --- | --------------------------- |
 | LOCAL | http://localhost:5000/health |
+| PROD  | https://node-server-test-5svf.onrender.com | 
 
 ### Como executar
 
