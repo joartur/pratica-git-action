@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  branches:
+    - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint-and-tests:
+    run-ons: ubuntu-latest
+
+  steps:
+    - name: Checkout repository
+      uses: action/Checkout@v4
+
+    - name: Setup Node.js
+      uses: action/setup-node@v4
+      with:
+        node-version: 20.x
+        cache: npm
+
+    - name: install depencies
+      run: npm ci
+
+    - name: Run linter
+      run: npm run lint
+
+    - name: Run tests
