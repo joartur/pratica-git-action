@@ -24,9 +24,9 @@ jobs:
         run: npm run build
 
       - name: Deploy to Render
-        run: |
-            curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
-            -H "Content-Type: application/json" \
-            -d '{"serviceId": "${{ env.SERVICE_ID }}"}' \
-            https://api.render.com/v1/services/${{ env.SERVICE_ID }}/deploys
+        uses: JorgeLNJunior/render-deploy@v1.4.5
+        with:
+          service_id: ${{ secrets.SERVICE_ID }}
+          api_key: ${{ secrets.RENDER_API_KEY }}
+          wait_deploy: true
+        
