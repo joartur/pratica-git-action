@@ -7,7 +7,7 @@ describe('HelloWorldRouter', () => {
             const response = await request(app).get('/hello-world');
 
             expect(response.status).toBe(200);
-            expect(response.body).toEqual({ text: 'Hello World!' });
+            expect(response.body).toEqual({ text: 'Hello World 2!' });
         });
     });
 });
