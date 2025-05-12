@@ -21,7 +21,7 @@ Roda a aplicação em modo desenvolvimento
 $ npm run start:dev
 ```
 
-### How to Test
+### Como testar
 
 ```
 $ npm run test
